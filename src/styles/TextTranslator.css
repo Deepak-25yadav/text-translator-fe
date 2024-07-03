@@ -1,0 +1,74 @@
+
+
+/* TextTranslator.css */
+
+.text-translator-p{
+    color: #04b0ad;
+    font-size: x-large;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+}
+.translator-container {
+    padding: 50px;
+    width: 70%;
+    margin: auto;
+    margin-top: 10vh;
+  }
+  
+  .translator-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .translator-column {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    margin: 0 10px;
+  }
+  
+  .translator-controls {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .translator-listening {
+    filter: brightness(0) saturate(100%) invert(11%) sepia(97%) saturate(5439%) hue-rotate(357deg) brightness(107%) contrast(114%);
+  }
+  
+  button {
+    background-color: #04b0ad;
+    height: 32px;
+    width: 90px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    margin-top: 20px;
+  }
+  
+  textarea {
+    border: 1px solid rgb(4, 176, 173);
+    padding: 10px;
+    border-radius: 5px;
+    resize: none;
+  }
+  
+  select {
+    height: 30px;
+    border-radius: 10px;
+  }
+
+  select{
+    padding: 5px;
+    margin-top: 20px;
+  }
+  img{
+    margin-top: 20px;
+  }
+  
