@@ -42,7 +42,7 @@ const TextTranslator = () => {
   const handleTranslate = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:8080/translator/translate-input-text",
+        "https://text-translator-be.onrender.com/translator/translate-input-text",
         {
           inputText: transcript ? transcript : inputText,
           fromLang: from,
