@@ -1,4 +1,5 @@
-## Project Presentation Video Link:  https://www.loom.com/share/55ea11acb6354d6093eb84dc3ec61bb5
+## Frontend Deployed Link: https://punt-partner-text-translator-deepak-y.netlify.app/
+### Project Presentation Video Link:  https://www.loom.com/share/55ea11acb6354d6093eb84dc3ec61bb5
 
 
 # Text Translator Application
@@ -48,7 +49,7 @@ Ensure you have the following installed on your system:
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/text-translator.git
+    git clone https://github.com/Deepak-25yadav/text-translator-fe.git
     cd text-translator
     ```
 
