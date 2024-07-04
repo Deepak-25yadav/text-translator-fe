@@ -117,7 +117,7 @@ const handleExchange = () => {
 
 
   return (
-    <div className="translator-container" style={{backgroundColor:"#e6f4fc",borderRadius:"10px",width:"80%"}}>
+    <div className="translator-container" style={{backgroundColor:"#e6f4fc",borderRadius:"10px",width:"80%", marginTop:"40px"}}>
     <p className="text-translator-p" style={{color:"#046ede",marginTop:"10px",position:"relative",top:"-20px"}}>Punt-Partner Text Translator</p>
       <div className="translator-main">
         <div className="translator-column">
