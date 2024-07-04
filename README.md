@@ -111,3 +111,13 @@ Contributions are welcome! If you have suggestions for improvements, feel free t
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+![pp-1](https://github.com/Deepak-25yadav/text-translator-fe/assets/112754831/3a940344-658b-4137-9f2d-7ef5888d5863)
+
+![pp-2](https://github.com/Deepak-25yadav/text-translator-fe/assets/112754831/77a9650c-9cc0-43e4-8bde-8ad46480dfa0
+
+![pp-3](https://github.com/Deepak-25yadav/text-translator-fe/assets/112754831/9ef7b725-b9c4-4991-b6de-93bf04e8a2f7)
+
+![pp-4](https://github.com/Deepak-25yadav/text-translator-fe/assets/112754831/b61b0724-e707-4385-a0ec-7fc7bd723889)
+
+
