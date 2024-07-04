@@ -119,5 +119,9 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ![pp-3](https://github.com/Deepak-25yadav/text-translator-fe/assets/112754831/9ef7b725-b9c4-4991-b6de-93bf04e8a2f7)
 
 ![pp-4](https://github.com/Deepak-25yadav/text-translator-fe/assets/112754831/b61b0724-e707-4385-a0ec-7fc7bd723889)
+![pp-5](https://github.com/Deepak-25yadav/text-translator-fe/assets/112754831/a07c7307-22ca-40e7-8644-432ce3992e6b)
+
+![pp-6](https://github.com/Deepak-25yadav/text-translator-fe/assets/112754831/0b2bd075-1303-4515-96aa-da40e3a2ff4e)
+
 
 
