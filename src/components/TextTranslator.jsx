@@ -24,6 +24,12 @@ const TextTranslator = () => {
   } = useSpeechRecognition();
 
   useEffect(() => {
+    if (transcript) {
+      setInputText(transcript);
+    }
+  }, [transcript]);
+
+  useEffect(() => {
     const fetchLanguages = async () => {
       try {
         const response = await axios.get(
@@ -44,7 +50,7 @@ const TextTranslator = () => {
       const response = await axios.post(
         "https://text-translator-be.onrender.com/translator/translate-input-text",
         {
-          inputText: transcript ? transcript : inputText,
+          inputText: inputText,
           fromLang: from,
           toLang: to,
         }
@@ -90,17 +96,37 @@ const handleClearText=()=>{
   setOutputText("")
 }
 
+
+// const handleExchange = () => {
+//   if (inputText && outputText && to && from) {
+//     setInputText(outputText);
+//     setOutputText(inputText);
+  
+//   }
+// };
+
+const handleExchange = () => {
+  if (inputText && outputText && to && from) {
+    setInputText(outputText);
+    setOutputText(inputText);
+    setFrom(to);
+    setTo(from);
+  }
+};
+
+
+
   return (
-    <div className="translator-container" style={{backgroundColor:"#e6f4fc"}}>
-    <p className="text-translator-p">Punt-Partner Text Translator</p>
+    <div className="translator-container" style={{backgroundColor:"#e6f4fc",borderRadius:"10px"}}>
+    <p className="text-translator-p" style={{color:"#046ede",marginTop:"10px",position:"relative",top:"-20px"}}>Punt-Partner Text Translator</p>
       <div className="translator-main">
         <div className="translator-column">
           <div className="translator-controls">
             <img onClick={SpeechRecognition.startListening} width={"20px"} src={mic} alt="Mic" />
             <img className={listening ? 'translator-listening' : ''} onClick={SpeechRecognition.stopListening} src={stop} width={"25px"} alt="Stop" />
-            <button onClick={handleReset}>Reset</button>
-            <select onChange={(e) => setFrom(e.target.value)} style={{color:"#04b0ad"}} >
-              <option value="">From-Language</option>
+            <button onClick={handleReset}>Reset Text</button>
+            <select onChange={(e) => setFrom(e.target.value)} value={from}  style={{color:"#04b0ad"}} >
+              <option value="en">English</option>
               {languages.map((item, i) => (
                 <option key={i} value={item.code}>{item.name}</option>
               ))}
@@ -109,18 +135,24 @@ const handleClearText=()=>{
           </div>
           <textarea
             onChange={(e) => setInputText(e.target.value)}
-            value={transcript ? transcript : inputText}
-            placeholder="Enter your text"
+            value={inputText}
+            // value={transcript ? transcript : inputText}
+            placeholder="Enter your text here..."
             rows={15}
             cols={50}
+            style={{fontSize: "16px"}}
           ></textarea>
         </div>
-        <img src={rightArrow} alt="" srcset="" style={{marginBottom:"90px"}}/>
+        
+        <button onClick={handleExchange}>
+        <span style={{position:"relative", top:"7px", fontSize:"14px"}}>Swap</span> 
+        <img src={rightArrow} alt="right" style={{marginBottom:"25px",width:"60px"}}/>
+        </button>
         <div className="translator-column">
           <div className="translator-controls">
           <button onClick={handleClearText}>Clear Text</button>
-            <select onChange={(e) => setTo(e.target.value)} style={{color:"#04b0ad"}}>
-              <option value="">To-Language</option>
+            <select onChange={(e) => setTo(e.target.value)} value={to}  style={{color:"#04b0ad"}}>
+              <option value="hi">Hindi</option>
               {languages.map((item, i) => (
                 <option key={i} value={item.code}>{item.name}</option>
               ))}
@@ -139,6 +171,7 @@ const handleClearText=()=>{
             placeholder="Your Translated Text"
             rows={15}
             cols={50}
+            style={{backgroundColor:"#f7fafa", fontSize: "16px", color:"#484bf7"}}
           ></textarea>
         </div>
       </div>
